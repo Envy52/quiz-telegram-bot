@@ -62,7 +62,7 @@ async def start_quiz(message: types.Message):
         return
 
     text = question['question']
-    options = question['answers']
+    options = question['options']
     buttons = [
         InlineKeyboardButton(opt.replace("#", ""), callback_data=f"{index}:{i}")
         for i, opt in enumerate(options)
